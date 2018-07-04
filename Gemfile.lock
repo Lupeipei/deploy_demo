@@ -220,10 +220,10 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
-  capistrano
-  capistrano-rails
-  capistrano-rvm
-  capistrano3-puma
+  capistrano (= 3.9.1)
+  capistrano-rails (= 1.4.0)
+  capistrano-rvm (= 0.1.2)
+  capistrano3-puma (= 3.1.1)
   capybara (>= 2.15, < 4.0)
   chromedriver-helper
   coffee-rails (~> 4.2)
