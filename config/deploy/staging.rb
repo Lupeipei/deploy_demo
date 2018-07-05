@@ -60,11 +60,11 @@
 #     # password: "please use keys"
 #   }
 
-server '34.257.22.153', user: 'deploy', roles: %w{app db web}
+server '106.15.182.207', user: 'deploy', roles: %w{app db web}
 set :deploy_to, "/home/deploy/deploy_demo/#{fetch(:rails_env)}"
 set :branch, :master
 set :stage, :staging
 set :ssh_options, {
-    keys: %w(~/.ssh/id_rsa.pub),
+    keys: %w(/home/deploy/.ssh/authorized_keys),
     auth_methods: %w(publickey)
 }

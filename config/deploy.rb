@@ -36,7 +36,7 @@ lock "3.9.1"
 # set :keep_releases, 5
 
 # Change these
-server '47.100.54.212', port: 80, roles: [:web, :app, :db], primary: true
+server '106.15.182.207', port: 80, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/Lupeipei/deploy_demo'
 set :application,     'deploy_demo'
