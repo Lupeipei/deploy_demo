@@ -1,5 +1,6 @@
 # config valid only for current version of Capistrano
-lock "3.9.1"
+# lock "3.9.1"
+sh "ssh-add"
 
 # set :application, "deploy_demo"
 # set :repo_url, "git@example.com:me/my_repo.git"
@@ -36,14 +37,13 @@ lock "3.9.1"
 # set :keep_releases, 5
 
 # Change these
-server '106.15.182.207', port: 80, roles: [:web, :app, :db], primary: true
 
 set :repo_url,        'https://github.com/Lupeipei/deploy_demo'
 set :application,     'deploy_demo'
 set :user,            'deploy'
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "public/uploads", "vendor/bundle"
-append :linked_files, "config/database.yml", "config/secrets.yml"
+append :linked_files, "config/database.yml", "config/master.key"
 
 set :rvm_type, :user
 set :rvm_ruby_version, '2.4.0'
